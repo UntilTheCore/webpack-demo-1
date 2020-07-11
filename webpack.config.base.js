@@ -52,6 +52,37 @@ module.exports = {
     // devServer: {
     //     contentBase : './dist'
     // }
+    module: {
+        rules: [
+            // 处理引入scss
+            {
+                test: /\.s[ac]ss$/i,
+                use: [
+                    // Creates `style` nodes from JS strings
+                    'style-loader',
+                    // Translates CSS into CommonJS
+                    'css-loader',
+                    // Compiles Sass to CSS
+                    // 'sass-loader',
+                    // 直接使用上面 sass-loader字符串不行的话就用下面这个对象。
+                    {
+                        loader: 'sass-loader',
+                        options: {
+                            // Prefer `dart-sass`
+                            implementation: require('dart-sass'),
+                        },
+                    }
+                ],
+            },
+            // 处理引入 less 文件
+            {
+                test: /\.less$/,
+                use: ['style-loader', 'css-loader', 'less-loader']
+            },
+            { test: /\.styl$/, loader: 'style-loader!css-loader!stylus-loader' }
+
+        ],
+    }
 };
 
 

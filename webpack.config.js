@@ -39,12 +39,32 @@ module.exports = {
     // ],
     module: {
         rules: [
+            ...base.module.rules,
             {
                 test: /\.css$/i,
                 // style-loader 和 MiniCssExtractPlugin 二选一，对css的处理需求一般只有1个
                 use: ['style-loader', 'css-loader'],
                 // use: [MiniCssExtractPlugin.loader, 'css-loader'],
             },
+            // {
+            //     test: /\.s[ac]ss$/i,
+            //     use: [
+            //         // Creates `style` nodes from JS strings
+            //         'style-loader',
+            //         // Translates CSS into CommonJS
+            //         'css-loader',
+            //         // Compiles Sass to CSS
+            //         // 'sass-loader',
+            //         // 直接使用上面 sass-loader字符串不行的话就用下面这个对象。
+            //         {
+            //             loader: 'sass-loader',
+            //             options: {
+            //                 // Prefer `dart-sass`
+            //                 implementation: require('dart-sass'),
+            //             },
+            //         }
+            //     ],
+            // },
         ],
     },
     // 如果不需要特别配置其他的内容，只下载webpack-dev-server然后配置package.json的脚本命令就可以运行了。
