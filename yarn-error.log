@@ -1,0 +1,36 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Users\Hi\Software\yarn\bin\yarn.js init -u
+
+PATH: 
+  C:\Users\Hi\Software\cmder\bin;C:\Users\Hi\Software\cmder\vendor\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\nodejs\;C:\Program Files\MongoDB\Server\4.2\bin;C:\Python27;C:\Users\Hi\Software\yarn\bin\;C:\Users\Hi\Software\Hugo;C:\Users\Hi\Software\Git\cmd;C:\Users\Hi\AppData\Local\Microsoft\WindowsApps;C:\Users\Hi\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Hi\AppData\Roaming\npm;C:\Users\Hi\AppData\Local\Yarn\bin;C:\Users\Hi\Software\WebStorm\bin;C:\Users\Hi\Software\Git\mingw64\bin;C:\Users\Hi\Software\Git\usr\bin;C:\Users\Hi\Software\cmder;C:\Users\Hi\Software\cmder\vendor\git-for-windows\cmd;C:\Users\Hi\Software\cmder\vendor\git-for-windows\mingw64\bin;C:\Users\Hi\Software\cmder\vendor\git-for-windows\usr\bin
+
+Yarn version: 
+  1.22.4
+
+Node version: 
+  12.16.1
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: canceled
+      at Interface.<anonymous> (C:\Users\Hi\Software\yarn\lib\cli.js:137008:13)
+      at Interface.emit (events.js:311:20)
+      at Interface._ttyWrite (readline.js:893:16)
+      at ReadStream.onkeypress (readline.js:198:10)
+      at ReadStream.emit (events.js:311:20)
+      at emitKeys (internal/readline/utils.js:438:14)
+      at emitKeys.next (<anonymous>)
+      at ReadStream.onData (readline.js:1160:36)
+      at ReadStream.emit (events.js:311:20)
+      at addChunk (_stream_readable.js:294:12)
+
+npm manifest: 
+  No manifest
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
