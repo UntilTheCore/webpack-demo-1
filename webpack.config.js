@@ -28,7 +28,20 @@ module.exports = {
                 'viewport': 'width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover',
             }
         })
-    ]
+    ],
+    module: {
+        rules: [
+            {
+                test: /\.css$/i,
+                use: ['style-loader', 'css-loader'],
+            },
+        ],
+    },
+    // 如果不需要特别配置其他的内容，只下载webpack-dev-server然后配置package.json的脚本命令就可以运行了。
+    // contentBase的意思是告知webpack-dev-server，在 localhost:8080 下建立服务，将 dist 目录下的文件，作为可访问文件。添加更多的参数可以对其有更多地处理。
+    devServer: {
+        contentBase : './dist'
+    }
 };
 
 
