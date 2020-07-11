@@ -79,8 +79,14 @@ module.exports = {
                 test: /\.less$/,
                 use: ['style-loader', 'css-loader', 'less-loader']
             },
-            { test: /\.styl$/, loader: 'style-loader!css-loader!stylus-loader' }
-
+            {
+                test: /\.styl$/,
+                loader: 'style-loader!css-loader!stylus-loader'
+            },
+            {
+                test: /\.(png|jpe?g|gif)$/i,
+                loader: 'file-loader',
+            },
         ],
     }
 };
